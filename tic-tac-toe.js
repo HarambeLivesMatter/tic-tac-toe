@@ -1,6 +1,8 @@
 // Write all your JavaScript code in this file!
 // You can use the namespace variable that's defined here.
 var namespace = "http://www.w3.org/2000/svg"
+var player1 = 1
+var player2 = 1
 var topleftclicked = 0
 function topleft() {
   if (topleftclicked == 0){
