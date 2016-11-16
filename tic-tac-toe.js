@@ -2,7 +2,7 @@
 // You can use the namespace variable that's defined here.
 var namespace = "http://www.w3.org/2000/svg"
 var player1 = 1
-var player2 = 1
+
 var topleftclicked = 0
 function topleft() {
   if (topleftclicked == 0){
@@ -14,6 +14,16 @@ function topleft() {
     circle.setAttribute ("fill","red")
     canvas.appendChild(circle)
     topleftclicked = 1
+  }else{
+    var canvas = document.getElementById("game-board")
+    var rect = document.createElementNS(namespace,"rect")
+    rect.setAttribute("x",20)
+    rect.setAttribute("y",20)
+    rect.setAttribute("width",20)
+    rect.setAttribute("height",20)
+    rect.setAttribute("fill","blue")
+    canvas.appendChild(rect)
+    topleftclicked = 0
   }
 }
 var topmiddleclicked = 0
