@@ -85,9 +85,9 @@ function middleft(){
   if (player1 = 1){
     if (middleftclicked == 0){
       var canvas = document.getElementById("game-board")
-      var circle = document.createElementNS(namespace,"cicle")
-      circle.setAttribute("cx",0)
-      circle.setAttribute("cy",51)
+      var circle = document.createElementNS(namespace,"circle")
+      circle.setAttribute("cx",20)
+      circle.setAttribute("cy",71)
       circle.setAttribute("r",20)
       circle.setAttribute("fill","red")
       canvas.appendChild(circle)
@@ -112,22 +112,48 @@ function middlemiddle(){
     if (middlemiddleclicked == 0){
       var canvas = document.getElementById("game-board")
       var circle = document.createElementNS(namespace,"circle")
-      circle.setAttribute("cx",51)
-      circle.setAttribute("cy",,51)
+      circle.setAttribute("cx",71)
+      circle.setAttribute("cy",71)
       circle.setAttribute("r",20)
-      circle.setAttribute("fill","cyan")
+      circle.setAttribute("fill","red")
       canvas.appendChild(circle)
       middlemiddleclicked = 1
     }else{
-      var canvas = document.getElementById("game-booard")
+      var canvas = document.getElementById("game-board")
       var rect = document.createElementNS(namespace,"rect")
-      rect.setAttribute("x",51)
-      rect.setAttribute("y",51)
+      rect.setAttribute("x",50)
+      rect.setAttribute("y",50)
       rect.setAttribute("height",20)
       rect.setAttribute("width",20)
       rect.setAttribute("fill","blue")
       canvas.appendChild(rect)
       middlemiddleclicked = 0
+      player1 = 0
+    }
+  }
+}
+var middlerightclicked = 0
+function middleright(){
+  if (player1 == 0){
+    if (middlerightclicked == 0){
+      var canvas = document.getElementById("gamee-board")
+      var circle =document.createElementNS(namespace,"circle")
+      circle.setAttribute("cx",102)
+      circle.setAttribute("cy",51)
+      circle.setAttribute("r",20)
+      circle.setAttribute("fill","red")
+      canvas.appendChild(circle)
+      middlerightclicked = 1
+    }else{
+      var canvas = document.getElementById("game-board")
+      var rect = document.createElementNS(nameespace,"rect")
+      rect.setAttribute("x",102)
+      rect.setAttribute("y",51)
+      rect.setAttirubte("height",20)
+      rect.setAttribute("width",20)
+      rect.setAttribute("fill","blue")
+      canvas.appendChild(rect)
+      middlerightclicked = 0
       player1 = 0
     }
   }
