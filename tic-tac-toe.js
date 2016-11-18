@@ -136,8 +136,8 @@ var middlerightclicked = 0
 function middleright(){
   if (player1 == 0){
     if (middlerightclicked == 0){
-      var canvas = document.getElementById("gamee-board")
-      var circle =document.createElementNS(namespace,"circle")
+      var canvas = document.getElementById("game-board")
+      var circle = document.createElementNS(namespace,"circle")
       circle.setAttribute("cx",102)
       circle.setAttribute("cy",51)
       circle.setAttribute("r",20)
@@ -154,6 +154,32 @@ function middleright(){
       rect.setAttribute("fill","blue")
       canvas.appendChild(rect)
       middlerightclicked = 0
+      player1 = 1
+    }
+  }
+}
+var bottomleftclicked = 0
+function bottomleft(){
+  if (player1 == 0){
+    if (bottomleftclicked == 0){
+      var canvas = document.getElementById("game-board")
+      var circle = document.createElementNS(namespace,"circle")
+      circle.setAttribute("cx",10)
+      circle.setAttribute("cy",120)
+      circle.setAttribute("r",20)
+      circle.setAttribute("fill","red")
+      canvas.appendChild(circle)
+      bottomleftclicked = 1
+    }else{
+      var canvas = document.getElementById("game-board")
+      var rect = document.createElementNS(namespace,"rect")
+      rect.setAttribute("x",0)
+      rect.setAttribute("y",110)
+      rect.setAttribute("width",20)
+      rect.setAttribute("height",20)
+      rect.setAttribute("fill","blue")
+      canvas.appendChild(rect)
+      bottomleftclicked = 0
       player1 = 0
     }
   }
