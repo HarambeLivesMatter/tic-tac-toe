@@ -138,8 +138,8 @@ function middleright(){
     if (middlerightclicked == 0){
       var canvas = document.getElementById("game-board")
       var circle = document.createElementNS(namespace,"circle")
-      circle.setAttribute("cx",102)
-      circle.setAttribute("cy",51)
+      circle.setAttribute("cx",120)
+      circle.setAttribute("cy",71)
       circle.setAttribute("r",20)
       circle.setAttribute("fill","red")
       canvas.appendChild(circle)
@@ -149,7 +149,7 @@ function middleright(){
       var rect = document.createElementNS(nameespace,"rect")
       rect.setAttribute("x",102)
       rect.setAttribute("y",51)
-      rect.setAttirubte("height",20)
+      rect.setAttribute("height",20)
       rect.setAttribute("width",20)
       rect.setAttribute("fill","blue")
       canvas.appendChild(rect)
@@ -180,6 +180,58 @@ function bottomleft(){
       rect.setAttribute("fill","blue")
       canvas.appendChild(rect)
       bottomleftclicked = 0
+      player1 = 0
+    }
+  }
+}
+var bottomiddleclicked = 0
+function bottomiddle(){
+  if(player1 == 1){
+    if (bottomiddleclicked == 0){
+      var canvas = document.getElementById("game-board")
+      var circle = document.createElementNS(namespace,"circle")
+      circle.setAttribute("cx",55)
+      circle.setAttribute("cy",120)
+      circle.setAttribute("r",20)
+      circle.setAttribute("fill","red")
+      canvas.appendChild(circle)
+      bottomiddleclicked = 0
+    }else{
+      var canvas = document.getElementById("game-board")
+      var rect = document.createElementNS(namespace,"rect")
+      rect.setAttribute("x",57)
+      rect.setAttribute("y",122)
+      rect.setAttribute("width",20)
+      rect.setAttribute("height",20)
+      rect.setAttribute("fill","blue")
+      canvas.appendChild(rect)
+      bottomiddleclicked = 0
+      player1 = 0
+    }
+  }
+}
+var bottomrightclicked = 0
+function bottomright(){
+  if(player1 == 1){
+    if(bottomrightclicked == 0){
+      var canvas = document.getElementById("game-board")
+      var circle = document.createElementNS(namespace,"circle")
+      circle.setAttribute("cx",140)
+      circle.setAttribute("cy",140)
+      circle.setAttribute("r",20)
+      circle.setAttirbute("fill","red")
+      canvas.appendChild(circle)
+      bottomrightclicked = 1
+    }else{
+      var canvas = document.getElementById("game-board")
+      var rect = document.createElementNS(namespace,"rect")
+      rect.setAttribute("x",145)
+      rect.setAttribute("y",145)
+      rect.setAttribute("width",20)
+      rect.setAttribute("height",20)
+      rect.setAttribute("fill","blue")
+      canvas.appendChild(rect)
+      bottomrightclicked = 0
       player1 = 0
     }
   }
