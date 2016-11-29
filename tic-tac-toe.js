@@ -82,12 +82,12 @@ function topright() {
   }
 }var middleftclicked = 0
 function middleft(){
-  if (player1 = 0){
+  if (player1 = 1){
     if (middleftclicked == 0){
       var canvas = document.getElementById("game-board")
       var circle = document.createElementNS(namespace,"circle")
       circle.setAttribute("cx",20)
-      circle.setAttribute("cy",71)
+      circle.setAttribute("cy",81)
       circle.setAttribute("r",20)
       circle.setAttribute("fill","red")
       canvas.appendChild(circle)
@@ -95,7 +95,7 @@ function middleft(){
     }else{
       var canvas = document.getElementById("game-board")
       var rect = document.createElementNS(namespace,"rect")
-      rect.setAttribute("x",0)
+      rect.setAttribute("x",20)
       rect.setAttribute("y",51)
       rect.setAttribute("height",20)
       rect.setAttribute("width",20)
